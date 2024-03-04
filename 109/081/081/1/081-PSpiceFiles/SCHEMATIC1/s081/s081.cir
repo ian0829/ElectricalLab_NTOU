@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-s081"  [ I:\¹q¤u¹ê²ß\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+** Creating circuit file "s081.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 6ms 0 100u 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(*) NOISE(*) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

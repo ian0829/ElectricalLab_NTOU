@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-s081"  [ C:\1______________\081\081-schematic1-s081.sim ] 
+
+** Creating circuit file "081-schematic1-s081.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrcadLite\PSpice\PSpice.ini file:
+.lib "C:\Program Files\OrcadLite\Capture\Library\PSpice\diode.lib" 
+.lib "C:\Program Files\OrcadLite\Capture\Library\PSpice\opamp.lib" 
+.lib "C:\Program Files\OrcadLite\Capture\Library\PSpice\bipolar.lib" 
+.lib "C:\Program Files\OrcadLite\Capture\Library\PSpice\siemens.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 101 0.01 10E8
+.STEP LIN PARAM VR2 0.01 10E8 101 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\081-SCHEMATIC1.net" 
+
+
+.END

@@ -1,0 +1,19 @@
+The conversion of the project was successful.
+
+The new directory structure is as follows:
+
+I:/筿龟策/109/081/081/1
+    081.opj
+    081.dsn
+    081.dbk
+I:/筿龟策/109/081/081/1/081-PSpiceFiles
+I:/筿龟策/109/081/081/1/081-PSpiceFiles/SCHEMATIC1
+    SCHEMATIC1.net
+    s081.sim
+    SCHEMATIC1.als
+I:/筿龟策/109/081/081/1/081-PSpiceFiles/SCHEMATIC1/s081
+    s081.out
+    s081.out.1
+    s081.mrk
+    s081.cir
+    s081.mif

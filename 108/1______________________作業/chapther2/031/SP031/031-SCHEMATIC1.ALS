@@ -1,0 +1,17 @@
+.ALIASES
+Q_Q1            Q1(c=VC b=VB e=VE )
+R_R1            R1(1=VB 2=VC )
+R_R2            R2(1=0 2=VB )
+R_R3            R3(1=0 2=VE )
+R_R4            R4(1=0 2=VO1 )
+C_C1            C1(+=VB -=N00659 )
+C_C2            C2(+=VE -=VO1 )
+C_C3            C3(+=VC -=0 )
+C_C4            C4(+=VC -=0 )
+V_V1            V1(+=N00659 -=0 )
+V_V2            V2(+=VC -=0 )
+_    _(VO1=VO1)
+_    _(VE=VE)
+_    _(VB=VB)
+_    _(VC=VC)
+.ENDALIASES

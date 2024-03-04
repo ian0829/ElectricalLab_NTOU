@@ -1,0 +1,17 @@
+** Profile: "SCHEMATIC1-S081"  [ F:\電工實習\1______________________作業\chapther2\081\081\081-schematic1-s081.sim ] 
+
+** Creating circuit file "081-schematic1-s081.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrcadLite\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 50n 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\081-SCHEMATIC1.net" 
+
+
+.END

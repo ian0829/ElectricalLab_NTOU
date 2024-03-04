@@ -1,0 +1,318 @@
+
+**** 12/14/20 15:43:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-s081"  [ I:\筿龟策\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "s081.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 6ms 0 100u 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(*) NOISE(*) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 081
+.EXTERNAL OUTPUT OUT4
+V_V1         +VCC 0 12Vdc
+V_V2         -VCC 0 -12Vdc
+R_R11         V50 N00356  10k  
+R_R12         0 N00393  5.242k  
+R_R13         N00468 N00393  10.29k  
+R_R21         N00468 N01368  5.25k  
+R_R22         N01368 N01428  4.75k  
+R_R23         N01428 N01104  {VR2}  
+C_C22         0 N01104  9.8385n  
+R_R24         0 N01209  5.242k  
+R_R25         OUT1 N01209  9.677k  
+C_C21         N01368 OUT1  10.129n  
+C_C31         N01623 OUT2  9.8226n  
+R_R33         N01547 N01551  {VR3}  
+R_R35         OUT2 N01579  7.548k  
+C_C32         0 N01551  9.64n  
+R_R32         N01623 N01547  6.867k  
+R_R34         0 N01579  5.242k  
+R_R31         OUT1 N01623  7.367k  
+C_C41         N01948 OUT3  10.022n  
+R_R43         N01872 N01876  {VR4}  
+R_R45         OUT3 N01904  2.815k  
+C_C42         0 N01876  10.159n  
+R_R42         N01948 N01872  10.75k  
+R_R44         0 N01904  5.242k  
+R_R41         OUT2 N01948  13.25k  
+X_U5         OUT3 OUT4 +VCC -VCC OUT4 uA741
+X_U6         N00356 N00393 +VCC -VCC N00468 uA741
+X_U7         N01104 N01209 +VCC -VCC OUT1 uA741
+X_U8         N01551 N01579 +VCC -VCC OUT2 uA741
+X_U9         N01876 N01904 +VCC -VCC OUT3 uA741
+V_V4         V50 0  
++PULSE 0v 0.1v 0s 1ns 1ns 0.1ms 0.2ms
+.PARAM  vr4=2.5k vr3=500 vr2=500
+
+**** RESUMING s081.cir ****
+.END
+
+**** 12/14/20 15:43:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-s081"  [ I:\筿龟策\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.dx         X_U5.dy         X_U6.dx         X_U6.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U7.dx         X_U7.dy         X_U8.dx         X_U8.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U9.dx         X_U9.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 12/14/20 15:43:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-s081"  [ I:\筿龟策\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.qx         X_U6.qx         X_U7.qx         X_U8.qx         
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75           93.75         
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U9.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 12/14/20 15:43:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-s081"  [ I:\筿龟策\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  V50)    0.0000  ( +VCC)   12.0000  ( -VCC)  -12.0000  ( OUT1)    -.0058      
+
+( OUT2)    -.0163  ( OUT3)    -.0281  ( OUT4)    -.0281  (N00356)-797.3E-06     
+
+(N00393)-778.0E-06 (N00468)    -.0015 (N01104)    -.0023 (N01209)    -.0023     
+
+(N01368)    -.0019 (N01428)    -.0023 (N01547)    -.0069 (N01551)    -.0070     
+
+(N01579)    -.0069 (N01623)    -.0064 (N01872)    -.0182 (N01876)    -.0184     
+
+(N01904)    -.0184 (N01948)    -.0174 (X_U5.6) 2.643E-06 (X_U5.7)    -.0281     
+
+(X_U5.8)    -.0281 (X_U5.9)    0.0000 (X_U6.6) 139.4E-09 (X_U6.7)    -.0015     
+
+(X_U6.8)    -.0015 (X_U6.9)    0.0000 (X_U7.6) 548.4E-09 (X_U7.7)    -.0058     
+
+(X_U7.8)    -.0058 (X_U7.9)    0.0000 (X_U8.6) 1.554E-06 (X_U8.7)    -.0164     
+
+(X_U8.8)    -.0164 (X_U8.9)    0.0000 (X_U9.6) 2.694E-06 (X_U9.7)    -.0282     
+
+(X_U9.8)    -.0282 (X_U9.9)    0.0000 (X_U5.10)    -.6357                       
+
+(X_U5.11)   11.9600                   (X_U5.12)   11.9600                       
+
+(X_U5.13)    -.6219                   (X_U5.14)    -.6219                       
+
+(X_U5.53)   11.0000                   (X_U5.54)  -11.0000                       
+
+(X_U5.90) 79.75E-06                   (X_U5.91)   40.0000                       
+
+(X_U5.92)  -40.0000                   (X_U5.99)    0.0000                       
+
+(X_U6.10)    -.6085                   (X_U6.11)   11.9600                       
+
+(X_U6.12)   11.9600                   (X_U6.13)    -.5946                       
+
+(X_U6.14)    -.5946                   (X_U6.53)   11.0000                       
+
+(X_U6.54)  -11.0000                   (X_U6.90) 11.08E-06                       
+
+(X_U6.91)   40.0000                   (X_U6.92)  -40.0000                       
+
+(X_U6.99)    0.0000                   (X_U7.10)    -.6100                       
+
+(X_U7.11)   11.9600                   (X_U7.12)   11.9600                       
+
+(X_U7.13)    -.5961                   (X_U7.14)    -.5961                       
+
+(X_U7.53)   11.0000                   (X_U7.54)  -11.0000                       
+
+(X_U7.90)-279.7E-06                   (X_U7.91)   40.0000                       
+
+(X_U7.92)  -40.0000                   (X_U7.99)    0.0000                       
+
+(X_U8.10)    -.6146                   (X_U8.11)   11.9600                       
+
+(X_U8.12)   11.9600                   (X_U8.13)    -.6007                       
+
+(X_U8.14)    -.6007                   (X_U8.53)   11.0000                       
+
+(X_U8.54)  -11.0000                   (X_U8.90)    -.0012                       
+
+(X_U8.91)   40.0000                   (X_U8.92)  -40.0000                       
+
+(X_U8.99)    0.0000                   (X_U9.10)    -.6261                       
+
+(X_U9.11)   11.9600                   (X_U9.12)   11.9600                       
+
+(X_U9.13)    -.6122                   (X_U9.14)    -.6122                       
+
+(X_U9.53)   11.0000                   (X_U9.54)  -11.0000                       
+
+(X_U9.90)    -.0034                   (X_U9.91)   40.0000                       
+
+(X_U9.92)  -40.0000                   (X_U9.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.683E-03
+    V_V2         6.684E-03
+    V_V4        -7.973E-08
+    X_U5.vb      2.643E-11
+    X_U5.vc      1.103E-11
+    X_U5.ve      1.248E-11
+    X_U5.vlim    7.975E-08
+    X_U5.vlp    -4.000E-11
+    X_U5.vln    -4.000E-11
+    X_U6.vb      1.394E-12
+    X_U6.vc      1.100E-11
+    X_U6.ve      1.250E-11
+    X_U6.vlim    1.108E-08
+    X_U6.vlp    -4.000E-11
+    X_U6.vln    -4.000E-11
+    X_U7.vb      5.484E-12
+    X_U7.vc      1.101E-11
+    X_U7.ve      1.250E-11
+    X_U7.vlim   -2.797E-07
+    X_U7.vlp    -4.000E-11
+    X_U7.vln    -4.000E-11
+    X_U8.vb      1.554E-11
+    X_U8.vc      1.102E-11
+    X_U8.ve      1.249E-11
+    X_U8.vlim   -1.164E-06
+    X_U8.vlp    -4.000E-11
+    X_U8.vln    -4.000E-11
+    X_U9.vb      2.694E-11
+    X_U9.vc      1.103E-11
+    X_U9.ve      1.248E-11
+    X_U9.vlim   -3.353E-06
+    X_U9.vlp    -4.000E-11
+    X_U9.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.60E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/14/20 15:43:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-s081"  [ I:\筿龟策\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.16
+  Total job time (using Solver 1)   =       10.27
+

@@ -1,0 +1,16 @@
+* source 051
+.EXTERNAL OUTPUT VO1
+M_M2         VD VG VS VS MbreakN           
+C_C5         VS 0  47u  
+R_R2         0 VG  645k  
+R_R3         0 VS  300  
+C_C1         VG N00659  10u  
+R_R4         0 VO1  4.7k  
+R_R1         VG N00289  200k  
+V_V1         N00659 0  
++SIN 0 0.1 10K 0 0 0
+C_C2         VD VO1  10u  
+C_C3         N00289 0  0.1u  
+R_R5         VD N00289  1k  
+C_C4         N00289 0  120u  
+V_V2         N00289 0 20Vdc

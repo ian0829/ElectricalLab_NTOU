@@ -1,0 +1,203 @@
+
+**** 06/05/20 15:56:37 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-s091_1"  [ C:\1________________________\CHAPTHER2\091\091-SCHEMATIC1-s091_1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "091-SCHEMATIC1-s091_1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrcadLite\PSpice\PSpice.ini file:
+.lib "C:\Program Files\OrcadLite\Capture\Library\PSpice\siemens.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5e16 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\091-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING 091-SCHEMATIC1.net ****
+* source 091
+.EXTERNAL OUTPUT VO11
+.EXTERNAL OUTPUT VO22
+V_V1         V1 0  AC 1
++SIN 0 0.1 948180 0 0 0
+C_C3         +15V 0  1n  
+V_V2         +15V 0 15
+C_C4         -15V 0  1n  
+V_V3         -15V 0 -15
+R_R6         VO11 N01732  2.7k  
+R_R7         N01732 VO22  27k  
+R_R8         0 N02076  2.4k  
+X_U1         V1 VO11 +15V -15V VO11 uA741
+X_U2         N02076 N01732 +15V -15V VO22 uA741
+C_C1         +15V 0  1n  
+C_C2         0 -15V  1n  
+
+**** RESUMING 091-SCHEMATIC1-s091_1.sim.cir ****
+.END
+
+**** 06/05/20 15:56:37 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-s091_1"  [ C:\1________________________\CHAPTHER2\091\091-SCHEMATIC1-s091_1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U2.dx         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1            
+
+
+**** 06/05/20 15:56:37 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-s091_1"  [ C:\1________________________\CHAPTHER2\091\091-SCHEMATIC1-s091_1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/05/20 15:56:37 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-s091_1"  [ C:\1________________________\CHAPTHER2\091\091-SCHEMATIC1-s091_1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V1)    0.0000  ( +15V)   15.0000  ( -15V)  -15.0000  ( VO11) 19.25E-06      
+
+( VO22) 68.19E-06  (N01732)-172.1E-06 (N02076)-191.3E-06 (X_U1.6)-4.262E-09     
+
+(X_U1.7) 26.78E-06 (X_U1.8) 26.78E-06 (X_U1.9)    0.0000 (X_U2.6)-6.848E-09     
+
+(X_U2.7) 68.64E-06 (X_U2.8) 68.64E-06 (X_U2.9)    0.0000 (X_U1.10)    -.6077    
+
+(X_U1.11)   14.9600                   (X_U1.12)   14.9600                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)   14.0000                   (X_U1.54)  -14.0000                       
+
+(X_U1.90) 151.2E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U2.10)    -.6079                   (X_U2.11)   14.9600                       
+
+(X_U2.12)   14.9600                   (X_U2.13)    -.5940                       
+
+(X_U2.14)    -.5940                   (X_U2.53)   14.0000                       
+
+(X_U2.54)  -14.0000                   (X_U2.90) 8.899E-06                       
+
+(X_U2.91)   40.0000                   (X_U2.92)  -40.0000                       
+
+(X_U2.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -7.972E-08
+    V_V2        -3.334E-03
+    V_V3         3.334E-03
+    X_U1.vb     -4.262E-14
+    X_U1.vc      1.400E-11
+    X_U1.ve      1.400E-11
+    X_U1.vlim    1.512E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_U2.vb     -6.848E-14
+    X_U2.vc      1.400E-11
+    X_U2.ve      1.400E-11
+    X_U2.vlim    8.899E-09
+    X_U2.vlp    -4.000E-11
+    X_U2.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.00E-01  WATTS
+
+
+ERROR -- Time step =  131.8E-09 is too small in Transient Analysis at
+Time =  100.0E+03.  Minimum allowable step size =  50.00E+03.
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V1) 4.433E-06  ( +15V)   15.0000  ( -15V)  -15.0000  ( VO11) 23.68E-06      
+
+( VO22) 23.87E-06  (N01732)-172.1E-06 (N02076)-191.3E-06 (X_U1.6)-4.596E-09     
+
+(X_U1.7) 31.30E-06 (X_U1.8) 31.30E-06 (X_U1.9)    0.0000 (X_U2.6)-2.535E-09     
+
+(X_U2.7) 24.23E-06 (X_U2.8) 24.23E-06 (X_U2.9)    0.0000 (X_U1.10)    -.6077    
+
+(X_U1.11)   14.9600                   (X_U1.12)   14.9600                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)   14.0000                   (X_U1.54)  -14.0000                       
+
+(X_U1.90) 152.3E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U2.10)    -.6079                   (X_U2.11)   14.9600                       
+
+(X_U2.12)   14.9600                   (X_U2.13)    -.5940                       
+
+(X_U2.14)    -.5940                   (X_U2.53)   14.0000                       
+
+(X_U2.54)  -14.0000                   (X_U2.90) 7.257E-06                       
+
+(X_U2.91)   40.0000                   (X_U2.92)  -40.0000                       
+
+(X_U2.99)    0.0000                   
+

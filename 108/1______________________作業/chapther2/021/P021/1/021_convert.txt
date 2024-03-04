@@ -1,0 +1,21 @@
+The conversion of the project was successful.
+
+The new directory structure is as follows:
+
+I:/筿龟策/1______________________穨/chapther2/021/1
+    021.opj
+    021.dsn
+    021.dbk
+I:/筿龟策/1______________________穨/chapther2/021/1/021-PSpiceFiles
+I:/筿龟策/1______________________穨/chapther2/021/1/021-PSpiceFiles/SCHEMATIC1
+    SCHEMATIC1.net
+    021.sim
+    SCHEMATIC1.als
+I:/筿龟策/1______________________穨/chapther2/021/1/021-PSpiceFiles/SCHEMATIC1/021
+    021.dat
+    021.out
+    021.prb
+    021.mrk
+    021.1op
+    021.cir
+    021.mif

@@ -1,0 +1,131 @@
+
+**** 05/01/20 14:16:54 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-051"  [ C:\1________________________\chapther2\051\051-SCHEMATIC1-051.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "051-SCHEMATIC1-051.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrcadLite\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.5m 0 50n 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\051-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING 051-SCHEMATIC1.net ****
+* source 051
+.EXTERNAL OUTPUT VO1
+M_M2         VD VG VS VS MbreakN           
+C_C5         VS 0  47u  
+R_R2         0 VG  645k  
+R_R3         0 VS  300  
+C_C1         VG N00659  10u  
+R_R4         0 VO1  4.7k  
+R_R1         VG N00289  200k  
+V_V1         N00659 0  
++SIN 0 0.1 10K 0 0 0
+C_C2         VD VO1  10u  
+C_C3         N00289 0  0.1u  
+R_R5         VD N00289  1k  
+C_C4         N00289 0  120u  
+V_V2         N00289 0 20Vdc
+
+**** RESUMING 051-SCHEMATIC1-051.sim.cir ****
+.END
+
+**** 05/01/20 14:16:54 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-051"  [ C:\1________________________\chapther2\051\051-SCHEMATIC1-051.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    0            
+          KP   20.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+**** 05/01/20 14:16:54 ************** PSpice Lite (Mar 2000) *****************
+
+ ** Profile: "SCHEMATIC1-051"  [ C:\1________________________\chapther2\051\051-SCHEMATIC1-051.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VD)   17.8610  (   VG)   15.2660  (   VS)     .6416  (  VO1)    0.0000      
+
+(N00289)   20.0000 (N00659)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -2.162E-03
+
+    TOTAL POWER DISSIPATION   4.32E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            1.16
+

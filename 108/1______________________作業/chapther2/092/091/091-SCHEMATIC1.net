@@ -1,0 +1,16 @@
+* source 091
+.EXTERNAL OUTPUT VO11
+.EXTERNAL OUTPUT VO22
+V_V1         V1 0  AC 1
++SIN 0 0.01 986.132kHz 0 0 0
+C_C3         +15V 0  120u  
+V_V2         +15V 0 15
+C_C4         -15V 0  120u  
+V_V3         -15V 0 -15
+R_R6         VO11 N01732  2.7k  
+R_R7         N01732 VO22  270k  
+R_R8         0 N02076  2.4k  
+X_U1         V1 VO11 +15V -15V VO11 uA741
+X_U2         N02076 N01732 +15V -15V VO22 uA741
+C_C1         +15V 0  0.1u  
+C_C2         0 -15V  0.1u  

@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-tts"  [ C:\ps041\tt-schematic1-tts.sim ] 
+
+** Creating circuit file "tt-SCHEMATIC1-tts.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 50n 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\tt-SCHEMATIC1.net" 
+
+
+.END

@@ -1,0 +1,21 @@
+* source 081
+.EXTERNAL OUTPUT VO55
+.EXTERNAL OUTPUT VO11
+R_R13         N02290 VO55  10k  
+V_V1         V1 0  
++SIN 0 0.01 5.4k 0 0 0
+X_U3         N01962 N02290 +15V -15V VO55 uA741
+C_C3         +15V 0  1n  
+V_V2         +15V 0 15
+C_C4         -15V 0  1n  
+V_V3         -15V 0 -15
+R_R6         VO11 N01732  2.2k  
+R_R7         N01732 VO22  33k  
+R_R8         0 N02076  2k  
+X_U1         V1 VO11 +15V -15V VO11 uA741
+R_R11         N01962 V1  10k  
+R_R10         N01962 VO22  10k  
+X_U2         N02076 N01732 +15V -15V VO22 uA741
+C_C1         +15V 0  1n  
+R_R12         N02290 0  10k  
+C_C2         0 -15V  1n  

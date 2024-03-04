@@ -1,0 +1,75 @@
+
+**** 12/14/20 15:09:44 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-s081"  [ I:\¹q¤u¹ê²ß\109\081\081\1\081-pspicefiles\schematic1\s081.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "s081.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nom.lib" 
+
+*Analysis directives: 
+.AC LIN 101 1 10k
+.STEP LIN PARAM VR1 0.01 1000 200 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(*) NOISE(*) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 081
+.EXTERNAL OUTPUT OUT4
+V_V1         +VCC 0 12Vdc
+V_V2         -VCC 0 -12Vdc
+V_V3         N00318 0  AC 1
++SIN 0 0.1V 10KHz 0 0 0
+R_R11         N00318 N00356  10k  
+R_R12         0 N00393  5.242k  
+R_R13         N00468 N00393  10.29k  
+R_R21         N00468 N01368  5.25k  
+R_R22         N01368 N01428  4.75k  
+R_R23         N01428 N01104  {VR2}  
+C_C22         0 N01104  9.8385n  
+R_R24         0 N01209  5.242k  
+R_R25         OUT1 N01209  9.677k  
+C_C21         N01368 OUT1  10.129n  
+C_C31         N01623 OUT2  9.8226n  
+R_R33         N01547 N01551  {VR3}  
+R_R35         OUT2 N01579  7.548k  
+C_C32         0 N01551  9.64n  
+R_R32         N01623 N01547  6.867k  
+R_R34         0 N01579  5.242k  
+R_R31         OUT1 N01623  7.367k  
+C_C41         N01948 OUT3  10.022n  
+R_R43         N01872 N01876  {VR4}  
+R_R45         OUT3 N01904  2.815k  
+C_C42         0 N01876  10.159n  
+R_R42         N01948 N01872  10.75k  
+R_R44         0 N01904  5.242k  
+R_R41         OUT2 N01948  13.25k  
+X_U5         OUT3 OUT4 +VCC -VCC OUT4 uA741
+X_U6         N00356 N00393 +VCC -VCC N00468 uA741
+X_U7         N01104 N01209 +VCC -VCC OUT1 uA741
+X_U8         N01551 N01579 +VCC -VCC OUT2 uA741
+X_U9         N01876 N01904 +VCC -VCC OUT3 uA741
+.PARAM  vr4=2.5k vr3=500 vr2=500
+
+**** RESUMING s081.cir ****
+.END
+
+ERROR(ORPSIM-15167): Undefined parameter: VR1.
+
